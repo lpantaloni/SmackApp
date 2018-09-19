@@ -12,6 +12,8 @@
 		E312CC28215138210024E412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E312CC26215138210024E412 /* Main.storyboard */; };
 		E312CC2A215138220024E412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E312CC29215138220024E412 /* Assets.xcassets */; };
 		E312CC2D215138220024E412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E312CC2B215138220024E412 /* LaunchScreen.storyboard */; };
+		E392382D215280900069DACD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392382C215280900069DACD /* constants.swift */; };
+		E392382F215287910069DACD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392382E215287910069DACD /* LoginVC.swift */; };
 		E3FC84D021516E0E003ADDC5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FC84CE21516E0E003ADDC5 /* SWRevealViewController.m */; };
 		E3FC84D521519801003ADDC5 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC84D421519801003ADDC5 /* ChatVC.swift */; };
 		E3FC84D721519812003ADDC5 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC84D621519812003ADDC5 /* ChannelVC.swift */; };
@@ -28,6 +30,8 @@
 		E312CC29215138220024E412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E312CC2C215138220024E412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E312CC2E215138220024E412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E392382C215280900069DACD /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		E392382E215287910069DACD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E3FC84CD21516E0D003ADDC5 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3FC84CE21516E0E003ADDC5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		E3FC84CF21516E0E003ADDC5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		E312CC21215138200024E412 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				E392382B2152807C0069DACD /* Utilities */,
 				E3FC84D3215197E2003ADDC5 /* Model */,
 				E3FC84D2215197DB003ADDC5 /* View */,
 				E3FC84D1215197D2003ADDC5 /* Controller */,
@@ -89,6 +94,14 @@
 				E312CC2E215138220024E412 /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		E392382B2152807C0069DACD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E392382C215280900069DACD /* constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E3FC84CC21516DF9003ADDC5 /* Supporting Files */ = {
@@ -106,6 +119,7 @@
 			children = (
 				E3FC84D421519801003ADDC5 /* ChatVC.swift */,
 				E3FC84D621519812003ADDC5 /* ChannelVC.swift */,
+				E392382E215287910069DACD /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,9 +268,11 @@
 			files = (
 				E3FC84D721519812003ADDC5 /* ChannelVC.swift in Sources */,
 				E3FC84D521519801003ADDC5 /* ChatVC.swift in Sources */,
+				E392382F215287910069DACD /* LoginVC.swift in Sources */,
 				E3FC84D921523831003ADDC5 /* GradientView.swift in Sources */,
 				E312CC23215138200024E412 /* AppDelegate.swift in Sources */,
 				E3FC84D021516E0E003ADDC5 /* SWRevealViewController.m in Sources */,
+				E392382D215280900069DACD /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
