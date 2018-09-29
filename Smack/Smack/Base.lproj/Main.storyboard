@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -116,7 +114,7 @@
                                 <rect key="frame" x="237" y="89" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-pO-Id8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-pO-Id8" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="P7Y-ai-5YL"/>
@@ -145,7 +143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS6-N6-JfL">
-                                                    <rect key="frame" x="35" y="12" width="68" height="21"/>
+                                                    <rect key="frame" x="35" y="11.5" width="68" height="21"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,6 +180,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="oxY-jU-d39" id="hJp-Qb-csO"/>
+                        <outlet property="userImg" destination="hkn-pO-Id8" id="ehV-hZ-BFZ"/>
                         <segue destination="IiG-vo-Zyl" kind="show" identifier="toLogin" id="qF2-Ra-EBw"/>
                     </connections>
                 </viewController>
@@ -326,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-M4-GpO">
-                                <rect key="frame" x="110" y="445.5" width="155" height="27"/>
+                                <rect key="frame" x="110" y="445" width="155" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.4823529412" green="0.68235294120000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -336,7 +335,7 @@
                                     <action selector="pickBGColorPressed:" destination="lfb-kD-nhD" eventType="touchUpInside" id="dk1-Qb-H2b"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-9n-JAr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-9n-JAr" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="311" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="JBq-Hr-qyr"/>
@@ -417,7 +416,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-lt-Ohd">
-                                <rect key="frame" x="137.5" y="311.5" width="100" height="130"/>
+                                <rect key="frame" x="137.5" y="311" width="100" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="qN2-c6-z9P"/>
                                 </constraints>
@@ -444,6 +443,10 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Oej-BV-MwQ">
+                                <rect key="frame" x="177.5" y="223.5" width="20" height="20"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -458,15 +461,18 @@
                             <constraint firstItem="ivA-j3-4VX" firstAttribute="top" secondItem="rjw-1r-yyV" secondAttribute="bottom" constant="20" id="doI-fZ-pYK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wog-pD-DeJ" secondAttribute="trailing" constant="8" id="fY9-k1-tIq"/>
                             <constraint firstItem="uLg-7E-sKI" firstAttribute="centerX" secondItem="Rlf-jv-SZP" secondAttribute="centerX" id="h5Y-qR-Xae"/>
+                            <constraint firstItem="Oej-BV-MwQ" firstAttribute="centerY" secondItem="Rlf-jv-SZP" secondAttribute="centerY" constant="-100" id="iAT-qi-IrQ"/>
                             <constraint firstItem="rjw-1r-yyV" firstAttribute="centerX" secondItem="Rlf-jv-SZP" secondAttribute="centerX" id="jmI-k8-nBt"/>
                             <constraint firstItem="3ev-9n-JAr" firstAttribute="centerX" secondItem="Rlf-jv-SZP" secondAttribute="centerX" id="kVu-bh-4SO"/>
                             <constraint firstItem="xp4-M4-GpO" firstAttribute="top" secondItem="iIA-lt-Ohd" secondAttribute="bottom" constant="4" id="mkx-ru-Hzl"/>
+                            <constraint firstItem="Oej-BV-MwQ" firstAttribute="centerX" secondItem="Rlf-jv-SZP" secondAttribute="centerX" id="oTc-jz-Dwk"/>
                             <constraint firstItem="iIA-lt-Ohd" firstAttribute="width" secondItem="3ev-9n-JAr" secondAttribute="width" id="wfS-wg-VR6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="H68-0o-y91" id="MnW-jA-dT1"/>
                         <outlet property="passwordTxt" destination="JKV-Oq-djq" id="t6f-Kd-HvQ"/>
+                        <outlet property="spinner" destination="Oej-BV-MwQ" id="Qgs-gq-FYq"/>
                         <outlet property="userImg" destination="3ev-9n-JAr" id="o0x-3D-78d"/>
                         <outlet property="usernameTxt" destination="wjp-u8-dHg" id="MtB-UL-lgO"/>
                         <segue destination="o0d-5z-NRi" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="WbK-Bd-6TR"/>
