@@ -26,6 +26,11 @@ class ChannelVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,15 +40,7 @@ class ChannelVC: UIViewController {
     @objc func userDataDidChanged(_ notif: Notification) {
         // uodate UI
         // User
-        if AuthService.instance.isLoggedIn {
-            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
-            userImg.image = UIImage(named: UserDataService.instance.avatarName)
-            userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
-        } else {
-            loginBtn.setTitle("Login", for: .normal)
-            userImg.image = UIImage(named: "menuProfileIcon")
-            userImg.backgroundColor = UIColor.clear
-        }
+        setupUserInfo()
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
@@ -55,6 +52,19 @@ class ChannelVC: UIViewController {
         } else {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
+    }
+    
+    func setupUserInfo() {
+        if AuthService.instance.isLoggedIn {
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        } else {
+            loginBtn.setTitle("Login", for: .normal)
+            userImg.image = UIImage(named: "menuProfileIcon")
+            userImg.backgroundColor = UIColor.clear
+        }
+
     }
 
     /*
