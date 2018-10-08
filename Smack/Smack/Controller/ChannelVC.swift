@@ -35,7 +35,16 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupUserInfo()
         
     }
+    
+    @IBAction func addChannelPressed(_ sender: Any) {
+        debugPrint("Entering addChannelPressed")
+        let addChannel = AddChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+        debugPrint("Exiting addChannelPressed")
 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

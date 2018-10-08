@@ -113,6 +113,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6j-zQ-bvI">
                                 <rect key="frame" x="237" y="89" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="fp2-hF-Aeh" eventType="touchUpInside" id="FQq-X9-spr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-pO-Id8" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
@@ -182,8 +185,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TableView" destination="bxM-mU-m4A" id="D80-WB-5Cv"/>
                         <outlet property="loginBtn" destination="oxY-jU-d39" id="hJp-Qb-csO"/>
+                        <outlet property="tableView" destination="bxM-mU-m4A" id="smb-3y-uRB"/>
                         <outlet property="userImg" destination="hkn-pO-Id8" id="ehV-hZ-BFZ"/>
                         <segue destination="IiG-vo-Zyl" kind="show" identifier="toLogin" id="qF2-Ra-EBw"/>
                     </connections>
