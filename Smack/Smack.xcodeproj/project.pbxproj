@@ -20,6 +20,7 @@
 		E35EB77D216B9A2100A2374F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35EB77C216B9A2100A2374F /* SocketService.swift */; };
 		E37BC9E9216A198C00AE46CB /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BC9E8216A198C00AE46CB /* ChannelCell.swift */; };
 		E37D9A6C2170E50000120E55 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D9A6B2170E50000120E55 /* Message.swift */; };
+		E37D9A6E2170F99B00120E55 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D9A6D2170F99B00120E55 /* KeyboardBoundView.swift */; };
 		E38B9D502167B8C000681B67 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B9D4F2167B8C000681B67 /* MessageService.swift */; };
 		E38B9D522167B95D00681B67 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B9D512167B95D00681B67 /* Channel.swift */; };
 		E392382D215280900069DACD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392382C215280900069DACD /* constants.swift */; };
@@ -54,6 +55,7 @@
 		E35EB77C216B9A2100A2374F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		E37BC9E8216A198C00AE46CB /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		E37D9A6B2170E50000120E55 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E37D9A6D2170F99B00120E55 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = "../../../Smack Assets/KeyboardBind View/KeyboardBoundView.swift"; sourceTree = "<group>"; };
 		E38B9D4F2167B8C000681B67 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		E38B9D512167B95D00681B67 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E392382C215280900069DACD /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				E3946B1E2159392900119AA2 /* AvatarCell.swift */,
 				E3437EB2215E7E5E00ABA873 /* CircleImage.swift */,
 				E37BC9E8216A198C00AE46CB /* ChannelCell.swift */,
+				E37D9A6D2170F99B00120E55 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37D9A6E2170F99B00120E55 /* KeyboardBoundView.swift in Sources */,
 				E35EB77D216B9A2100A2374F /* SocketService.swift in Sources */,
 				E3437EB6215FC61000ABA873 /* ProfileVC.swift in Sources */,
 				E37BC9E9216A198C00AE46CB /* ChannelCell.swift in Sources */,

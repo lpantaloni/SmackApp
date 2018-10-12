@@ -36,7 +36,6 @@ class SocketService: NSObject {
 //            debugPrint("Connect with timeout : \(self.socket.status)")
 //        }
         self.socket.emit("newChannel", channelName, channelDescription)
-        self.socket.emit("newChannel", "TESTLPA", "TESTLPA")
 //        debugPrint("New Channel \(channelName)")
 //        debugPrint(self.socket.status)
         completion(true)
@@ -56,4 +55,26 @@ class SocketService: NSObject {
         }
     }
     
+    func addMessage(messageBody: String, userId: String, channelId: String, completion: @escaping CompletionHandler) {
+        let user = UserDataService.instance
+        
+        self.socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
+        
+        completion(true)
+        
+    }
+    
+//    func getMessage(completion: @escaping CompletionHandler) {
+//        socket.on("messageCreated") { (dataArray, ack) in
+//            guard let messageBody = dataArray[0] as? String else { return }
+//            guard let userId = dataArray[1] as? String else { return }
+//            guard let channelId = dataArray[2] as? String else { return }
+//            guard let userName = dataArray[3] as? String else { return }
+//            guard let userAvatar = dataArray[4] as? String else { return }
+//            guard let userAvatarColor = dataArray[5] as? String else { return }
+//
+//
+////            let newMessage = Message( message: ,   userName: ,  channelID: ,  userAvatar: ,  userAvatarColor: ,  id:  timeStamp: String!)
+//        }
+//    }
 }

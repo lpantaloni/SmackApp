@@ -19,11 +19,11 @@ class MessageService {
     var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler) {
-        debugPrint("FIND ALL CHANNELS !!!!")
+//        debugPrint("FIND ALL CHANNELS !!!!")
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else { return }
-                debugPrint("Data retrieval is OK")
+//                debugPrint("Data retrieval is OK")
 
 /*                do {
                     self.channels = try JSONDecoder().decode([Channel].self, from: data)
@@ -36,6 +36,8 @@ class MessageService {
                 debugPrint("Channels :")
                 print(self.channels)
 */
+                self.clearChannels()
+
                 do {
                         if let json = try JSON(data: data).array {
                         for item in json {
@@ -53,11 +55,13 @@ class MessageService {
                 } catch {
                     return
                 }
+                debugPrint("------- Channels")
+                debugPrint(self.channels)
 
                 
             } else {
-                completion (false)
                 debugPrint(response.result.error as Any)
+                completion (false)
             }
         }
     }
