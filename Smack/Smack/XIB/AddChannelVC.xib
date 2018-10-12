@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChannelVCViewController" customModule="Smack" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="bgView" destination="beq-1o-jUh" id="ulW-ED-VsV"/>
-                <outlet property="channelDesc" destination="Vy9-I5-uqy" id="Tsr-zh-d3N"/>
+                <outlet property="chanDesc" destination="Vy9-I5-uqy" id="vyQ-u8-ctM"/>
                 <outlet property="nameTxt" destination="wQ7-ZD-u2t" id="TsX-UE-yZV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -130,7 +130,7 @@
                 <constraint firstAttribute="bottom" secondItem="beq-1o-jUh" secondAttribute="bottom" id="j3V-tZ-gDt"/>
                 <constraint firstAttribute="trailing" secondItem="nJc-8k-iZj" secondAttribute="trailing" constant="20" id="vE0-P9-aK1"/>
             </constraints>
-            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+            <point key="canvasLocation" x="628" y="173"/>
         </view>
     </objects>
     <resources>
