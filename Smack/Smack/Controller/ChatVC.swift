@@ -53,18 +53,33 @@ class ChatVC: UIViewController {
         // fille the chat window
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
+        getMessages()
+        
     }
 
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
             if success {
                 // do stuff with channels
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLbl.text = "No channel yet"
+                }
             }
         }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getMessages() {
+        guard let channelID = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessagesForChannel(channelID: channelID) { (success) in
+            
+        }
     }
     
 
