@@ -142,6 +142,7 @@
                                         <connections>
                                             <outlet property="messageBodyLbl" destination="OUP-QM-d6C" id="iva-Tf-E8k"/>
                                             <outlet property="timeStampLbl" destination="DMd-QN-hG1" id="d1P-KF-1Ad"/>
+                                            <outlet property="timestampLbl" destination="ey7-48-kLS" id="XGa-sz-97c"/>
                                             <outlet property="userImage" destination="KnE-DO-K95" id="GV3-vq-PiJ"/>
                                             <outlet property="userNameLbl" destination="Ezn-fk-jSg" id="F7P-MW-ZV5"/>
                                         </connections>
